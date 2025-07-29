@@ -206,11 +206,11 @@ function removeMessages() {
 // Additional animations
 function initAnimations() {
     // Animate stats on scroll
-    const stats = document.querySelectorAll('.stat h3');
+    const stats = document.querySelectorAll('.stat-animate');
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateNumber(entry.target);
+                animateNumber(entry.target); //TODO: Put back in
                 statsObserver.unobserve(entry.target);
             }
         });
@@ -229,20 +229,65 @@ function initAnimations() {
     });
 }
 
-function animateNumber(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''));
-    const suffix = element.textContent.replace(/\d/g, '');
-    let current = 0;
-    const increment = target / 50;
+function animateMaskedNumber(element) {
+    const startRaw = element.getAttribute('data-start');
+    const endRaw = element.getAttribute('data-target') || element.getAttribute('data-targer'); // typo fallback
+    if (!startRaw || !endRaw) return;
+
+    // Extract parts: ["00", "/", "0"] and ["24", "/", "7"], or ["0", "%"] and ["98", "%"]
+    const startParts = startRaw.match(/(\d+|\D+)/g);
+    const endParts = endRaw.match(/(\d+|\D+)/g);
+
+    if (!startParts || !endParts || startParts.length !== endParts.length) {
+        console.error("Mismatch in start and end format:", element);
+        return;
+    }
+
+    const numericIndexes = [];
+    const startNums = startParts.map((part, i) => {
+        const target = endParts[i];
+        if (/^\d+$/.test(part) && /^\d+$/.test(target)) {
+            numericIndexes.push(i);
+            return parseInt(part, 10);
+        }
+        return part;
+    });
+
+    const endNums = endParts.map((part, i) => {
+        if (numericIndexes.includes(i)) {
+            return parseInt(part, 10);
+        }
+        return part;
+    });
+
+    let progress = 0;
+    const steps = 50;
+    const interval = 20;
+
     const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
+        progress += 1;
+        const rendered = startNums.map((val, i) => {
+            if (numericIndexes.includes(i)) {
+                const current = val + (endNums[i] - val) * (progress / steps);
+                return Math.floor(current);
+            }
+            return val;
+        });
+
+        element.textContent = rendered.join('');
+
+        if (progress >= steps) {
+            element.textContent = endRaw;
             clearInterval(timer);
         }
-        element.textContent = Math.floor(current) + suffix;
-    }, 30);
+    }, interval);
 }
+
+
+function animateNumber(element) {
+    animateMaskedNumber(element);
+}
+
 
 // Performance optimizations
 function debounce(func, wait) {
