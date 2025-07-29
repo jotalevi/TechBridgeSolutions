@@ -1,383 +1,272 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctypehtml>
+    <html lang=en>
+    <meta charset=UTF-8>
+    <meta content="width=device-width,initial-scale=1" name=viewport>
     <title>TechBridge Solutions - Professional CRM Migrations</title>
-    <meta name="description" content="Complete CRM migrations to Dynamics and Salesforce. Technology-agnostic solutions to optimize your business.">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="style-0.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
+    <meta
+        content="Complete CRM migrations to Dynamics and Salesforce. Technology-agnostic solutions to optimize your business."
+        name=description>
+    <link href=base.css rel=stylesheet>
+    <link href=style-0.css rel=stylesheet>
+    <link href=https://fonts.googleapis.com rel=preconnect>
+    <link href=https://fonts.gstatic.com rel=preconnect crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel=stylesheet>
+    <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css rel=stylesheet>
+    <header class=header>
+        <nav class=nav>
+            <div class=nav-container>
+                <div class=nav-logo>
                     <h2>TechBridge<span>Solutions</span></h2>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class=nav-menu>
+                    <li><a href=#home>Home</a>
+                    <li><a href=#services>Services</a>
+                    <li><a href=#about>About</a>
+                    <li><a href=#contact>Contact</a>
                 </ul>
-                <div class="theme-toggle">
-                    <button class="theme-toggle-btn" id="themeToggle">
-                        <i class="fas fa-palette"></i>
-                    </button>
-                                         <div class="theme-dropdown" id="themeDropdown">
-                         <div class="theme-option" data-theme="light">
-                             <div class="theme-icon light">
-                                 <i class="fas fa-sun"></i>
-                             </div>
-                             <span>Light</span>
-                         </div>
-                         <div class="theme-option" data-theme="dark">
-                             <div class="theme-icon dark">
-                                 <i class="fas fa-moon"></i>
-                             </div>
-                             <span>Dark</span>
-                         </div>
-                         <div class="theme-option" data-theme="yellow">
-                             <div class="theme-icon yellow">
-                                 <i class="fas fa-star"></i>
-                             </div>
-                             <span>Yellow</span>
-                         </div>
-                         <div class="theme-option" data-theme="sunset">
-                             <div class="theme-icon sunset">
-                                 <i class="fas fa-sunset"></i>
-                             </div>
-                             <span>Sunset</span>
-                         </div>
-                         <div class="theme-option" data-theme="tropical">
-                             <div class="theme-icon tropical">
-                                 <i class="fas fa-palm-tree"></i>
-                             </div>
-                             <span>Tropical</span>
-                         </div>
-                         <div class="theme-option" data-theme="business">
-                             <div class="theme-icon business">
-                                 <i class="fas fa-briefcase"></i>
-                             </div>
-                             <span>Business</span>
-                         </div>
-                         <div class="theme-option" data-theme="delux">
-                             <div class="theme-icon delux">
-                                 <i class="fas fa-crown"></i>
-                             </div>
-                             <span>Delux</span>
-                         </div>
-                         <div class="theme-option" data-theme="scorchedsand">
-                             <div class="theme-icon scorchedsand">
-                                 <i class="fas fa-fire"></i>
-                             </div>
-                             <span>ScorchedSand</span>
-                         </div>
-                         <div class="theme-option" data-theme="wine">
-                             <div class="theme-icon wine">
-                                 <i class="fas fa-wine-glass"></i>
-                             </div>
-                             <span>Wine</span>
-                         </div>
-                         <div class="theme-option" data-theme="clear">
-                             <div class="theme-icon clear">
-                                 <i class="fas fa-cloud"></i>
-                             </div>
-                             <span>Clear</span>
-                         </div>
-                         <div class="theme-option" data-theme="purplehaze">
-                             <div class="theme-icon purplehaze">
-                                 <i class="fas fa-magic"></i>
-                             </div>
-                             <span>PurpleHaze</span>
-                         </div>
-                     </div>
+                <div class=theme-toggle><button class=theme-toggle-btn id=themeToggle><i
+                            class="fas fa-palette"></i></button>
+                    <div class=theme-dropdown id=themeDropdown>
+                        <div class=theme-option data-theme=light>
+                            <div class="theme-icon light"><i class="fas fa-sun"></i></div><span>Light</span>
+                        </div>
+                        <div class=theme-option data-theme=dark>
+                            <div class="theme-icon dark"><i class="fas fa-moon"></i></div><span>Dark</span>
+                        </div>
+                        <div class=theme-option data-theme=yellow>
+                            <div class="theme-icon yellow"><i class="fas fa-star"></i></div><span>Yellow</span>
+                        </div>
+                        <div class=theme-option data-theme=sunset>
+                            <div class="theme-icon sunset"><i class="fas fa-sunset"></i></div><span>Sunset</span>
+                        </div>
+                        <div class=theme-option data-theme=tropical>
+                            <div class="theme-icon tropical"><i class="fas fa-palm-tree"></i></div><span>Tropical</span>
+                        </div>
+                        <div class=theme-option data-theme=business>
+                            <div class="theme-icon business"><i class="fas fa-briefcase"></i></div><span>Business</span>
+                        </div>
+                        <div class=theme-option data-theme=delux>
+                            <div class="theme-icon delux"><i class="fas fa-crown"></i></div><span>Delux</span>
+                        </div>
+                        <div class=theme-option data-theme=scorchedsand>
+                            <div class="theme-icon scorchedsand"><i class="fas fa-fire"></i></div>
+                            <span>ScorchedSand</span>
+                        </div>
+                        <div class=theme-option data-theme=wine>
+                            <div class="theme-icon wine"><i class="fas fa-wine-glass"></i></div><span>Wine</span>
+                        </div>
+                        <div class=theme-option data-theme=clear>
+                            <div class="theme-icon clear"><i class="fas fa-cloud"></i></div><span>Clear</span>
+                        </div>
+                        <div class=theme-option data-theme=purplehaze>
+                            <div class="theme-icon purplehaze"><i class="fas fa-magic"></i></div><span>PurpleHaze</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <div class=nav-toggle><span></span> <span></span> <span></span></div>
             </div>
         </nav>
     </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    CRM Migrations that <span class="gradient-text">Transform</span> Your Business
-                </h1>
-                <p class="hero-subtitle">
-                    Specialists in complete CRM system migrations to Dynamics and Salesforce. 
+    <section class=hero id=home>
+        <div class=hero-container>
+            <div class=hero-content>
+                <h1 class=hero-title>CRM Migrations that <span class=gradient-text>Transform</span> Your Business</h1>
+                <p class=hero-subtitle>Specialists in complete CRM system migrations to Dynamics and Salesforce.
                     Technology-agnostic approach, guaranteed results.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Free Consultation</a>
-                    <a href="#services" class="btn btn-secondary">View Services</a>
-                </div>
+                <div class=hero-buttons><a href=#contact class="btn btn-primary">Free Consultation</a> <a href=#services
+                        class="btn btn-secondary">View Services</a></div>
             </div>
-            <div class="hero-visual">
-                <div class="service-card">
-                    <div class="migration-flow">
-                        <div class="source-system">
-                            <i class="fas fa-database"></i>
-                            <span>Current System</span>
-                        </div>
-                        <div class="bridge">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div class="target-system">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Dynamics/Salesforce</span>
-                        </div>
+            <div class=hero-visual>
+                <div class=service-card>
+                    <div class=migration-flow>
+                        <div class=source-system><i class="fas fa-database"></i> <span>Current System</span></div>
+                        <div class=bridge><i class="fas fa-arrow-right"></i></div>
+                        <div class=target-system><i class="fa-microsoft fab"></i> <span>Dynamics/Salesforce</span></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-background">
-            <div class="gradient-overlay"></div>
+        <div class=hero-background>
+            <div class=gradient-overlay></div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
+    <section class=services id=services>
+        <div class=container>
+            <div class=section-header>
                 <h2>Our Services</h2>
-                <p>Comprehensive solutions for successful CRM migrations</p>
+                <p>Comprehensive solutions for successful CRM migrations
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
+            <div class=services-grid>
+                <div class=service-card>
+                    <div class=service-icon><i class="fas fa-sync-alt"></i></div>
                     <h3>Complete Migration</h3>
-                    <p>End-to-end migration from any CRM system to Dynamics 365 or Salesforce, maintaining data integrity throughout the process.</p>
+                    <p>End-to-end migration from any CRM system to Dynamics 365 or Salesforce, maintaining data
+                        integrity throughout the process.
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                <div class=service-card>
+                    <div class=service-icon><i class="fas fa-chart-line"></i></div>
                     <h3>Analysis & Planning</h3>
-                    <p>Detailed assessment of your current system and strategic planning for a seamless migration with zero downtime.</p>
+                    <p>Detailed assessment of your current system and strategic planning for a seamless migration with
+                        zero downtime.
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
+                <div class=service-card>
+                    <div class=service-icon><i class="fas fa-cogs"></i></div>
                     <h3>Custom Configuration</h3>
-                    <p>Configuration and customization of Dynamics/Salesforce according to your business's specific needs and requirements.</p>
+                    <p>Configuration and customization of Dynamics/Salesforce according to your business's specific
+                        needs and requirements.
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
+                <div class=service-card>
+                    <div class=service-icon><i class="fas fa-users"></i></div>
                     <h3>Team Training</h3>
-                    <p>Comprehensive training for your team on the new system, ensuring successful adoption and optimal utilization.</p>
+                    <p>Comprehensive training for your team on the new system, ensuring successful adoption and optimal
+                        utilization.
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                <div class=service-card>
+                    <div class=service-icon><i class="fas fa-shield-alt"></i></div>
                     <h3>Post-Migration Support</h3>
-                    <p>Ongoing support and maintenance to ensure optimal performance of your new system after migration.</p>
+                    <p>Ongoing support and maintenance to ensure optimal performance of your new system after migration.
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
+                <div class=service-card>
+                    <div class=service-icon><i class="fas fa-rocket"></i></div>
                     <h3>Process Optimization</h3>
-                    <p>Business process improvement leveraging the advanced capabilities of Dynamics and Salesforce platforms.</p>
+                    <p>Business process improvement leveraging the advanced capabilities of Dynamics and Salesforce
+                        platforms.
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
+    <section class=about id=about>
+        <div class=container>
+            <div class=about-content>
+                <div class=about-text>
                     <h2>Why Choose TechBridge Solutions?</h2>
-                    <p>We are digital transformation experts with over 10 years of experience in CRM migrations. Our technology-agnostic approach allows us to work with any existing system and successfully migrate to the most robust platforms in the market.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Zero-downtime migrations</span>
+                    <p>We are digital transformation experts with over 10 years of experience in CRM migrations. Our
+                        technology-agnostic approach allows us to work with any existing system and successfully migrate
+                        to the most robust platforms in the market.
+                    <div class=about-features>
+                        <div class=feature><i class="fas fa-check-circle"></i> <span>Zero-downtime migrations</span>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Dynamics and Salesforce certified team</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>24/7 support during migration</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>100% satisfaction guarantee</span>
+                        <div class=feature><i class="fas fa-check-circle"></i> <span>Dynamics and Salesforce certified
+                                team</span></div>
+                        <div class=feature><i class="fas fa-check-circle"></i> <span>24/7 support during
+                                migration</span></div>
+                        <div class=feature><i class="fas fa-check-circle"></i> <span>100% satisfaction guarantee</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3 class="stat-animate" data-start="0+" data-targer="150+">0+</h3>
-                        <p>Successful Migrations</p>
+                <div class=about-stats>
+                    <div class=stat>
+                        <h3 class=stat-animate data-start=0+ data-targer=150+>0+</h3>
+                        <p>Successful Migrations
                     </div>
-                    <div class="stat">
-                        <h3 class="stat-animate" data-start="0%" data-targer="98%">0%</h3>
-                        <p>Client Satisfaction</p>
+                    <div class=stat>
+                        <h3 class=stat-animate data-start=0% data-targer=98%>0%</h3>
+                        <p>Client Satisfaction
                     </div>
-                    <div class="stat">
-                        <h3 class="stat-animate" data-start="00/0" data-target="24/7">00/0</h3>
-                        <p>Available Support</p>
+                    <div class=stat>
+                        <h3 class=stat-animate data-start=00/0 data-target=24/7>00/0</h3>
+                        <p>Available Support
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
+    <section class=contact id=contact>
+        <div class=container>
+            <div class=section-header>
                 <h2>Ready to Transform Your Business?</h2>
-                <p>Contact us for a free consultation and discover how we can help you</p>
+                <p>Contact us for a free consultation and discover how we can help you
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
+            <div class=contact-content>
+                <div class=contact-info>
                     <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                    <div class=contact-item><i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>info@techbridge-solutions.com</p>
+                            <p>info@techbridge-solutions.com
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                    <div class=contact-item><i class="fas fa-phone"></i>
                         <div>
                             <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+1 (555) 123-4567
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
+                    <div class=contact-item><i class="fas fa-clock"></i>
                         <div>
                             <h4>Business Hours</h4>
-                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+                <div class=contact-form-container>
+                    <form class=contact-form id=contactForm>
+                        <div class=form-group><label for=name>Full Name *</label> <input id=name name=name required>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="currentSystem">Current CRM System</label>
-                            <select id="currentSystem" name="currentSystem">
-                                <option value="">Select your current system</option>
-                                
-                                <!-- Enterprise CRMs -->
-                                <option value="salesforce">Salesforce</option>
-                                <option value="dynamics">Microsoft Dynamics 365</option>
-                                <option value="oracle">Oracle CX (Fusion CRM)</option>
-                                <option value="sap">SAP CRM (Sales Cloud)</option>
-                                
-                                <!-- Mid-Market CRMs -->
-                                <option value="hubspot">HubSpot CRM</option>
-                                <option value="zoho">Zoho CRM</option>
-                                <option value="sugar">SugarCRM</option>
-                                <option value="pipedrive">Pipedrive</option>
-                                <option value="freshsales">Freshsales</option>
-                                
-                                <!-- SMB & Regional CRMs -->
-                                <option value="bitrix24">Bitrix24</option>
-                                <option value="clarity">Clarity CRM</option>
-                                
-                                <option value="other">Other</option>
-
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="targetSystem">Target System</label>
-                            <select id="targetSystem" name="targetSystem">
-                                <option value="">Select your target</option>
-                                <option value="dynamics365">Dynamics 365</option>
-                                <option value="salesforce">Salesforce</option>
-                                <option value="undecided">Not decided yet</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project and specific needs..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loading" style="display: none;">
-                                <i class="fas fa-spinner fa-spin"></i> Sending...
-                            </span>
-                        </button>
+                        <div class=form-group><label for=email>Email *</label> <input id=email name=email required
+                                type=email></div>
+                        <div class=form-group><label for=company>Company</label> <input id=company name=company></div>
+                        <div class=form-group><label for=phone>Phone</label> <input id=phone name=phone type=tel></div>
+                        <div class=form-group><label for=currentSystem>Current CRM System</label> <select
+                                id=currentSystem name=currentSystem>
+                                <option value="">Select your current system
+                                <option value=salesforce>Salesforce
+                                <option value=dynamics>Microsoft Dynamics 365
+                                <option value=oracle>Oracle CX (Fusion CRM)
+                                <option value=sap>SAP CRM (Sales Cloud)
+                                <option value=hubspot>HubSpot CRM
+                                <option value=zoho>Zoho CRM
+                                <option value=sugar>SugarCRM
+                                <option value=pipedrive>Pipedrive
+                                <option value=freshsales>Freshsales
+                                <option value=bitrix24>Bitrix24
+                                <option value=clarity>Clarity CRM
+                                <option value=other>Other
+                            </select></div>
+                        <div class=form-group><label for=targetSystem>Target System</label> <select id=targetSystem
+                                name=targetSystem>
+                                <option value="">Select your target
+                                <option value=dynamics365>Dynamics 365
+                                <option value=salesforce>Salesforce
+                                <option value=undecided>Not decided yet
+                            </select></div>
+                        <div class=form-group><label for=message>Message *</label> <textarea id=message name=message
+                                placeholder="Tell us about your project and specific needs..." required
+                                rows=4></textarea></div><button class="btn btn-primary btn-full" type=submit><span
+                                class=btn-text>Send Message</span> <span class=btn-loading style=display:none><i
+                                    class="fas fa-spin fa-spinner"></i> Sending...</span></button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+    <footer class=footer>
+        <div class=container>
+            <div class=footer-content>
+                <div class=footer-section>
                     <h3>TechBridge Solutions</h3>
-                    <p>Transforming businesses through successful CRM migrations and innovative technological solutions.</p>
+                    <p>Transforming businesses through successful CRM migrations and innovative technological solutions.
                 </div>
-                <div class="footer-section">
+                <div class=footer-section>
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">CRM Migrations</a></li>
-                        <li><a href="#services">Consulting</a></li>
-                        <li><a href="#services">Technical Support</a></li>
-                        <li><a href="#services">Training</a></li>
+                        <li><a href=#services>CRM Migrations</a>
+                        <li><a href=#services>Consulting</a>
+                        <li><a href=#services>Technical Support</a>
+                        <li><a href=#services>Training</a>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class=footer-section>
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@techbridge-solutions.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techbridge-solutions.com
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 TechBridge Solutions. All rights reserved.</p>
+            <div class=footer-bottom>
+                <p>© 2024 TechBridge Solutions. All rights reserved.
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-</body>
-</html> 
+    <script src=script.js></script>
