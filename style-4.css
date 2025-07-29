@@ -1,0 +1,37 @@
+/* Tropical Theme - Theme-specific variables and overrides */
+
+:root {
+    --primary-color: #10b981;
+    --primary-dark: #059669;
+    --secondary-color: #06b6d4;
+    --accent-color: #fbbf24;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --bg-primary: #ffffff;
+    --bg-secondary: #ecfdf5;
+    --bg-dark: #1f2937;
+    --border-color: #a7f3d0;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --gradient-primary: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+    --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #fbbf24 100%);
+    --gradient-accent: linear-gradient(135deg, #fbbf24 0%, #10b981 100%);
+    --gradient-bg: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 50%, #6ee7b7 100%);
+    --hero-overlay: 
+        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme-specific overrides */
+.btn-primary:hover {
+    background: linear-gradient(135deg, #059669 0%, #0891b2 100%);
+} 

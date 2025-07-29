@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initAnimations();
     initSmoothScrolling();
+    initThemeToggle();
 });
 
 // Navigation functionality
@@ -60,7 +61,7 @@ function initScrollEffects() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+                entry.target.classList.add('animate');
                 observer.unobserve(entry.target);
             }
         });
@@ -388,9 +389,104 @@ function trackEvent(eventName, eventData = {}) {
     }
 }
 
+// Theme Toggle Functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeDropdown = document.getElementById('themeDropdown');
+    const themeOptions = document.querySelectorAll('.theme-option');
+    
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+    setTheme(savedTheme);
+    
+    // Toggle dropdown
+    themeToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themeDropdown.classList.toggle('active');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.theme-toggle')) {
+            themeDropdown.classList.remove('active');
+        }
+    });
+    
+    // Handle theme selection
+    themeOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const theme = option.getAttribute('data-theme');
+            setTheme(theme);
+            themeDropdown.classList.remove('active');
+            
+            // Update active state
+            themeOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+        });
+    });
+    
+    // Set initial active state
+    themeOptions.forEach(option => {
+        if (option.getAttribute('data-theme') === savedTheme) {
+            option.classList.add('active');
+        }
+    });
+}
+
+function setTheme(theme) {
+    // Find the theme-specific stylesheet link
+    const themeLinks = document.querySelectorAll('link[rel="stylesheet"]');
+    let themeLink = null;
+    
+    // Find the theme-specific stylesheet (not base.css)
+    for (let link of themeLinks) {
+        if (link.href.includes('style-') && !link.href.includes('base.css')) {
+            themeLink = link;
+            break;
+        }
+    }
+    
+    // Map theme names to CSS files
+    const themeFiles = {
+        'light': 'style-0.css',
+        'dark': 'style-1.css',
+        'yellow': 'style-2.css',
+        'sunset': 'style-3.css',
+        'tropical': 'style-4.css',
+        'business': 'style-5.css',
+        'delux': 'style-6.css',
+        'scorchedsand': 'style-7.css',
+        'wine': 'style-8.css',
+        'clear': 'style-9.css',
+        'purplehaze': 'style-10.css'
+    };
+    
+    const newHref = themeFiles[theme];
+    
+    if (newHref && themeLink && !themeLink.href.includes(newHref)) {
+        // Create new link element
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+        
+        // Replace the old theme stylesheet
+        themeLink.parentNode.replaceChild(newLink, themeLink);
+        
+        // Save theme preference
+        localStorage.setItem('selectedTheme', theme);
+        
+        // Add transition effect
+        document.body.style.transition = 'all 0.3s ease';
+        setTimeout(() => {
+            document.body.style.transition = '';
+        }, 300);
+    }
+}
+
 // Export functions for potential external use
 window.TechBridge = {
     trackEvent,
     showMessage,
-    validateForm
+    validateForm,
+    setTheme
 }; 

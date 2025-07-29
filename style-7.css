@@ -1,0 +1,37 @@
+/* ScorchedSand Theme - Theme-specific variables and overrides */
+
+:root {
+    --primary-color: #dc2626;
+    --primary-dark: #b91c1c;
+    --secondary-color: #ea580c;
+    --accent-color: #fbbf24;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fef2f2;
+    --bg-dark: #1f2937;
+    --border-color: #fecaca;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --gradient-primary: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+    --gradient-secondary: linear-gradient(135deg, #ea580c 0%, #fbbf24 100%);
+    --gradient-accent: linear-gradient(135deg, #fbbf24 0%, #dc2626 100%);
+    --gradient-bg: linear-gradient(135deg, #fef2f2 0%, #fecaca 50%, #fca5a5 100%);
+    --hero-overlay: 
+        radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(234, 88, 12, 0.05) 0%, transparent 50%);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme-specific overrides */
+.btn-primary:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+} 
