@@ -833,6 +833,10 @@ p {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding-top: 8rem;
+    }
+
     .container {
         padding: 0 1rem;
     }

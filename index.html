@@ -300,12 +300,26 @@
                             <label for="currentSystem">Current CRM System</label>
                             <select id="currentSystem" name="currentSystem">
                                 <option value="">Select your current system</option>
-                                <option value="sap">SAP</option>
-                                <option value="oracle">Oracle</option>
-                                <option value="sage">Sage</option>
-                                <option value="netsuite">NetSuite</option>
-                                <option value="quickbooks">QuickBooks</option>
+                                
+                                <!-- Enterprise CRMs -->
+                                <option value="salesforce">Salesforce</option>
+                                <option value="dynamics">Microsoft Dynamics 365</option>
+                                <option value="oracle">Oracle CX (Fusion CRM)</option>
+                                <option value="sap">SAP CRM (Sales Cloud)</option>
+                                
+                                <!-- Mid-Market CRMs -->
+                                <option value="hubspot">HubSpot CRM</option>
+                                <option value="zoho">Zoho CRM</option>
+                                <option value="sugar">SugarCRM</option>
+                                <option value="pipedrive">Pipedrive</option>
+                                <option value="freshsales">Freshsales</option>
+                                
+                                <!-- SMB & Regional CRMs -->
+                                <option value="bitrix24">Bitrix24</option>
+                                <option value="clarity">Clarity CRM</option>
+                                
                                 <option value="other">Other</option>
+
                             </select>
                         </div>
                         <div class="form-group">
@@ -314,7 +328,6 @@
                                 <option value="">Select your target</option>
                                 <option value="dynamics365">Dynamics 365</option>
                                 <option value="salesforce">Salesforce</option>
-                                <option value="both">Both</option>
                                 <option value="undecided">Not decided yet</option>
                             </select>
                         </div>
